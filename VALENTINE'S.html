@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Cyra Jane 💜</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, #f8e1ff, #e0bbff, #d291ff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    body::before {
+        content: "🌷 🌸 🌷 🌺 🌷 🌸";
+        position: absolute;
+        font-size: 80px;
+        opacity: 0.08;
+        top: 10%;
+        left: 5%;
+        transform: rotate(-20deg);
+    }
+
+    body::after {
+        content: "🌸 🌷 🌸 🌷 🌺";
+        position: absolute;
+        font-size: 80px;
+        opacity: 0.08;
+        bottom: 10%;
+        right: 5%;
+        transform: rotate(20deg);
+    }
+
+    .card {
+        background: white;
+        width: 650px;
+        padding: 50px;
+        border-radius: 25px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    h1 {
+        color: #8e44ad;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 16px;
+        margin: 15px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .yes {
+        background-color: #9b59b6;
+        color: white;
+    }
+
+    .yes:hover {
+        background-color: #8e44ad;
+        transform: scale(1.1);
+    }
+
+    .no {
+        background-color: #eee;
+        color: #8e44ad;
+        position: absolute;
+    }
+
+    #message {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #9b59b6;
+        font-size: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Cyra Jane Bancil,<br> Will You Be My Valentine? 💜🌷</h1>
+    <p>
+        Love,<br><br>
+        2 years na pero parang first day pa rin kitang minamahal.<br>
+        Araw-araw akong nagpapasalamat kasi ikaw yung pinili kong mahalin at pinili mo rin ako.
+        Yung pagiging caring mo, yung lambing mo, at yung pagmamahal mo…
+        hindi ko ipagpapalit sa kahit ano. 💖 <br> ILOVEYOUU LOVEY 🌷💗
+    </p>
+
+    <button class="btn yes" onclick="showLove()">Yes, of course 💖</button>
+    <button class="btn no" onmouseover="moveButton()" id="noBtn">No 😜</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+function showLove() {
+    document.getElementById("message").innerHTML =
+        "You just made me the happiest person alive 💜🌷✨";
+}
+
+function moveButton() {
+    var btn = document.getElementById("noBtn");
+    btn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+    btn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+}
+</script>
+
+</body>
+</html>
